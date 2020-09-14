@@ -6,8 +6,8 @@ import {
     Link
 } from "react-router-dom";
 import routes from '../Constans/routes'
-import Header from './DefaultHeader'
-import Footer from './DefaultFooter'
+import Header from './DefaultHeader/DefaultHeader'
+import Footer from './DefaultFooter/DefaultFooter'
 
 function index() {
     return (

@@ -5,7 +5,7 @@ const Product = React.lazy(() => import('../Views/Product/Product'))
 
 const routes = [
     {path:'/' , exact:true , component:Home},
-    {path:'/product/:id' , exact:true , component:Product}
+    {path:'/product/:id' , exact:true , component:Product},
 ]
 
 export default routes

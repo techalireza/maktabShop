@@ -1,0 +1,23 @@
+$color-primary : #27017c;
+$color-secondary : #00d392;
+$font-primary : 1rem 'sans','myriadpro';
+
+.navbar{
+    font:$font-primary;
+}
+.my-buttons{
+    background-color: $color-primary !important;
+    border-color :$color-primary !important;
+    color: #fdfddf !important;
+    font-size: .7rem;
+}
+.my-buttons:focus{
+    box-shadow: none !important;
+    outline: none !important;
+}
+.navbar-nav .dropdown-menu {
+    text-align: right;
+}
+.dropdown-toggle::after {
+    margin: -.1rem .4rem;
+}

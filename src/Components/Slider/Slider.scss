@@ -1,0 +1,8 @@
+.carousel-inner{
+    border-radius: 0rem;
+}
+@media only screen and (max-width: 992px) {
+    .carousel-inner{
+        border-radius: 1rem;
+    }
+}

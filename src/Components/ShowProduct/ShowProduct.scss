@@ -1,0 +1,52 @@
+$color-primary : #27017c;
+$color-secondary : #00d392;
+$font-primary : 1rem 'sans','myriadpro';
+
+.my-row{
+    max-width: 1340px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    padding-bottom: 1rem;
+}
+.overflow-x-scroll{
+    overflow-x: scroll;
+}
+
+.overflow-x-scroll::-webkit-scrollbar-track
+{
+    border-radius: 10px;
+    background-color: #aaa;
+}
+.overflow-x-scroll::-webkit-scrollbar
+{
+    width: 5px;
+    background-color: transparent
+}
+.overflow-x-scroll::-webkit-scrollbar-thumb
+{
+    border-radius: 10px;
+    background-color: $color-secondary;
+}
+
+.my-col{
+    display: table;
+    width: 261px;
+    height: auto;
+    margin: 1rem;
+}
+
+@media only screen and (max-width: 992px) {
+    .my-col{
+        width: 200px;
+        margin: .5rem;
+    }
+    .overflow-x-scroll{
+        overflow-x: inherit;
+    }
+    .my-row{
+        max-width: 100%;
+        padding-bottom: 0;
+    }
+}

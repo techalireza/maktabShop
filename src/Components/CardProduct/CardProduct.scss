@@ -1,0 +1,55 @@
+$color-primary : #27017c;
+$color-secondary : #00d392;
+$font-primary : 1rem 'sans','myriadpro';
+
+.my-card-body{
+    margin: 1rem 0;
+}
+
+.my-card-img{
+    margin-top: 1rem;
+    object-fit: contain;
+    height: 135px;
+}
+.my-card-title{
+    font: $font-primary;
+    font-weight: 700;
+    color: #222;
+    font-size: .8rem;
+    text-align: right;
+    height: 5rem;
+}
+.my-del-tag{
+    font:$font-primary;
+    color: #888;
+    font-size: .8rem;
+    text-decoration: line-through;
+    margin-left: .5rem;
+}
+.my-card-price{
+    font:$font-primary;
+    font-size: 1.2rem;
+    text-align: left;
+    font-weight: 700;
+    padding: 0;
+    span{
+        margin-right: .2rem;;
+        font-weight: 400;
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .my-col:last-child{
+        padding-left: 2rem;    
+    }
+    .my-col:last-child .my-card-body{
+        width: 198px;
+    }
+    .my-card-body{
+        margin: 0;
+    }
+    .my-card-title{
+        height: 4rem;
+    }
+}

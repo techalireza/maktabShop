@@ -1,0 +1,20 @@
+$color-primary : #27017c;
+$color-secondary : #00d392;
+$font-primary : 1rem 'sans','myriadpro';
+
+.bg-specials{
+    background-color: $color-primary;
+    overflow: auto;
+}
+.specials-img{
+    object-fit: contain;
+    width: 170px;
+    height: auto;
+}
+@media only screen and (max-width: 992px) {
+    .specials-img{
+        object-fit: contain;
+        width: 140px;
+        margin-right: 1rem;
+    }
+}

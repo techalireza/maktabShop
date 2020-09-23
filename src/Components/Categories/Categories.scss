@@ -1,0 +1,49 @@
+$color-primary : #27017c;
+$color-secondary : #00d392;
+$font-primary : 1rem 'sans','myriadpro';
+
+.categories{
+    margin: 1rem 0;
+    background-color: $color-secondary;
+}
+.header-cat{
+    font:$font-primary;
+    font-size: 2rem;
+    color: $color-primary;
+    text-align: center;
+    margin-top: 1rem;
+}
+.my-cat-col{
+        padding:  0;
+        margin-bottom: 1rem;
+        margin-top: .5rem;
+        .my-cat-link{
+            color:$color-primary;
+            font:$font-primary;
+            font-size: .8rem;
+            text-align: center;
+            font-weight: 700;
+        }
+        .my-mt-2{
+            margin-top: .75rem;
+        }
+}
+.my-cat-col:nth-child(12){
+    margin-right: 10%;
+    margin-bottom: 3rem;
+}
+@media only screen and (max-width: 992px) {
+    
+    .my-cat-link{
+        font-size: .7rem;
+    }
+    
+    .my-cat-col:nth-child(12){
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+    .my-cat-col:nth-child(17){
+        margin-right: 20%;
+        margin-bottom: 1rem;
+    }
+}

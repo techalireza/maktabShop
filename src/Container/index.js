@@ -17,8 +17,8 @@ function index() {
                 <Switch>
                     <React.Suspense fallback={<div>loading</div>}>
                         {
-                            routes.map(item => (
-                                <Route path={item.path} exact={item.exact} render={props => <item.component {...props} />} />
+                            routes.map((item , index) => (
+                                <Route key={index} path={item.path} exact={item.exact} render={props => <item.component {...props} />} />
                             ))
                         }
                     </React.Suspense>

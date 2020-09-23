@@ -1,6 +1,6 @@
 @font-face{
   font-family: "sans";
-  src: url("./Asset/font/IRANSansWeb.woff2") format("woff");
+  src: url("./Asset/font/3.woff") format("woff");
 }
 body {
   margin: 0;
@@ -10,6 +10,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   direction: rtl;
+  overflow-x: hidden;
 }
 
 code {

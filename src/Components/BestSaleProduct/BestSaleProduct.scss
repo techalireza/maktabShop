@@ -1,0 +1,95 @@
+$color-primary : #27017c;
+$color-secondary : #00d392;
+$font-primary : 1rem 'sans','myriadpro';
+
+.sale-container{
+    margin: 3rem auto;
+    width: 89%;
+    border: 1px solid #ddd;
+    border-radius: 1rem;
+    box-shadow: 1px 1px 5px rgba(39, 1, 124 , .1);
+    .sale-text{
+        position: relative;
+        margin-left: 1rem;
+        margin-right: 1.5rem;
+        margin-bottom: 0;
+        font-weight: 400;
+        font-size: 1.3rem;
+        color: #444;
+        padding: .5rem 0 1rem;
+        line-height: 31px;
+        white-space: nowrap;
+    }
+    .sale-text span{
+        position: relative;
+        font-weight: 700;
+        font-size: 1.3rem;
+        padding: .5rem 0 1.1rem;
+        line-height: 31px;
+        white-space: nowrap;
+    }
+    .sale-text::after{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background-color: #dfdfdf;
+        height: 1px;
+        content: "";
+        z-index: 0;
+    }
+    .sale-text span::before{
+        content: "";
+        position: absolute;
+        right: 0;
+        left: -40px;
+        bottom: 0;
+        background-color: $color-secondary;
+        height: 1px;
+        z-index: 1;
+    }
+    .sale-text span::after{
+        content: "";
+        position: absolute;
+        left: -45px;
+        width: 15px;
+        height: 1px;
+        background-color: #fff;
+        bottom: 0;
+        z-index: 1;
+    }
+    .best-sale{
+        .my-col{
+            width: 195px;
+            margin: .7rem;
+        }
+        .my-card{
+    
+        }
+        .my-card-body{
+            margin: .5rem 0;
+        }
+        .my-card-img{
+            height: 120px;
+        }
+        .my-card-title{
+            font: $font-primary;
+            font-weight: 700;
+            font-size: .7rem;
+            height: 3rem;
+        }
+        .my-card-price{
+            font:$font-primary;
+            font-size: 1rem;
+            text-align: left;
+            font-weight: 700;
+            padding: 0;
+            span{
+                margin-right: .4rem;;
+                font-weight: 400;
+                font-size: .9rem;
+            }
+        }
+        
+    }
+}

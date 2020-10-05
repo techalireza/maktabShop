@@ -2,6 +2,11 @@ $color-primary : #27017c;
 $color-secondary : #00d392;
 $font-primary : 1rem 'sans','myriadpro';
 
+.fa-shopping-cart {
+    font-size: 1.5rem;
+    color: $color-primary;
+    margin-right: 2rem;
+}
 .navbar{
     font:$font-primary;
 }
@@ -20,4 +25,25 @@ $font-primary : 1rem 'sans','myriadpro';
 }
 .dropdown-toggle::after {
     margin: -.1rem .4rem;
+}
+.my-container{
+    margin: 0 auto;
+    width: 89%;
+}
+.header{
+    background-color: #fff;
+    top: 0;
+    width: 100%;
+    z-index: 5;
+    box-shadow: 1px 1px 10px rgba(20,20,20,.3);
+    transition: .7s;
+}
+@media only screen and (max-width: 992px) {
+    .my-container{
+        width: 100%;
+    }
+    .header{
+        position: relative;
+        box-shadow: none;
+    }
 }

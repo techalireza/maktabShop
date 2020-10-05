@@ -1,0 +1,21 @@
+$color-primary : #27017c;
+$color-secondary : #00d392;
+$color-third : #017C27;
+$font-primary : 1rem 'sans','myriadpro';
+
+.footer-section{
+    font: $font-primary;
+    background-color: #132a3e;
+    color: #fff;
+    transition: .5s all ease-in;
+    text-align: right;
+}
+.footer-section h4{
+    font-size: 1rem;
+    font-weight: 700;
+}
+.footer-section li{
+    font-size: .9rem;
+    margin: .5rem 0;
+    color: #fff;
+}

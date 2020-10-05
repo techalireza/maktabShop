@@ -1,5 +1,6 @@
 $color-primary : #27017c;
 $color-secondary : #00d392;
+$color-third : #017C27;
 $font-primary : 1rem 'sans','myriadpro';
 
 .bg-specials{
@@ -10,6 +11,10 @@ $font-primary : 1rem 'sans','myriadpro';
     object-fit: contain;
     width: 170px;
     height: auto;
+}
+.bg-vegetable-category{
+    background-color: $color-third;
+    overflow: auto;
 }
 @media only screen and (max-width: 992px) {
     .specials-img{

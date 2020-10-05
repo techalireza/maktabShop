@@ -5,35 +5,21 @@ import ShowProduct from '../ShowProduct/ShowProduct'
 import './BestSaleProduct.scss'
 import api from '../../api/api'
 
-function NewsProduct({ cat }) {
-    const [attribut, setAttribut] = useState({ ...cat, orderby: 'date' })
-    const [catName, setCatName] = useState("")
-    const [categories, setCategories] = useState([])
-    useEffect(() => {
-        api.get('products/categories', {
-            parent: 0
-        }).then((response) => {
-            console.log(response.data)
-            setCategories(response.data)
-        })
-    }, [])
-    useEffect(() => {
-        categories.map(item => item.id == cat.category &&
-            setCatName(item.name)
-        )
-    }, [])
+function NewsProduct({ cat , name , categoryID }) {
+    // const [attribut, setAttribut] = useState({ ...cat })
+    
     return (
         <Container fluid className="sale-container">
             <div className="text-right sale-text">
-                <span>پر فروش ترین {catName}</span>
+                <span>{name}</span>
             </div>
-            <Container fluid className="overflow-auto">
-                <div className="my-row py-3 best-sale">
+            <div className="overflow-auto px-0 px-lg-3">
+                <div className="my-row best-sale">
                     {
-                        <ShowProduct methode='products' attribut={attribut} />
+                        <ShowProduct methode='products' attribut={cat} categoryID={categoryID} />
                     }
                 </div>
-            </Container>
+            </div>
         </Container>
     )
 }

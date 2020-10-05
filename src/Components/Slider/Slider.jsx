@@ -9,23 +9,23 @@ import slider3 from '../../Asset/img/slider3.jpg'
 
 function Slider() {
     return (
-        <Container fluid className="px-lg-0 my-3">
+        <Container fluid className="px-lg-0">
             <Carousel>
-                <Carousel.Item>
+                <Carousel.Item className="my-width-carousel">
                     <img
                         className="d-block w-100"
                         src={slider1}
                         alt="First slide"
                     />
                 </Carousel.Item>
-                <Carousel.Item>
+                <Carousel.Item className="my-width-carousel">
                     <img
                         className="d-block w-100"
                         src={slider2}
                         alt="Third slide"
                     />
                 </Carousel.Item>
-                <Carousel.Item>
+                <Carousel.Item className="my-width-carousel">
                     <img
                         className="d-block w-100"
                         src={slider3}

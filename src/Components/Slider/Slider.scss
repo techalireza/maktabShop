@@ -1,8 +1,15 @@
 .carousel-inner{
     border-radius: 0rem;
+    position: relative;
+}
+.my-width-carousel{
+    height: calc( 100vh - 70px );
 }
 @media only screen and (max-width: 992px) {
     .carousel-inner{
         border-radius: 1rem;
+    }
+    .my-width-carousel{
+        height: 100%;
     }
 }

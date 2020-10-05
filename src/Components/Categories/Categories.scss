@@ -1,7 +1,9 @@
 $color-primary : #27017c;
 $color-secondary : #00d392;
 $font-primary : 1rem 'sans','myriadpro';
-
+.w-65{
+    width: 65% !important;
+}
 .categories{
     margin: 1rem 0;
     background-color: $color-secondary;
@@ -13,8 +15,14 @@ $font-primary : 1rem 'sans','myriadpro';
     text-align: center;
     margin-top: 1rem;
 }
+.my-cat-link:hover{
+    text-decoration: none;
+}
+.my-cat-col:hover{
+    box-shadow: 2px 2px 10px rgba($color: $color-primary , $alpha: .15);
+}
 .my-cat-col{
-        padding:  0;
+        padding:  1rem;
         margin-bottom: 1rem;
         margin-top: .5rem;
         .my-cat-link{

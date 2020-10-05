@@ -8,23 +8,27 @@ import {
 import routes from '../Constans/routes'
 import Header from './DefaultHeader/DefaultHeader'
 import Footer from './DefaultFooter/DefaultFooter'
+import Basket from '../Views/Basket/Basket'
 
 function index() {
     return (
         <div>
-            <Header />
             <Router>
+                <Header>
+                    <Route path="/basket"
+                        render={(props) => <Basket {...props} />} />
+                </Header>
                 <Switch>
                     <React.Suspense fallback={<div>loading</div>}>
                         {
-                            routes.map((item , index) => (
+                            routes.map((item, index) => (
                                 <Route key={index} path={item.path} exact={item.exact} render={props => <item.component {...props} />} />
                             ))
                         }
                     </React.Suspense>
                 </Switch>
+                <Footer />
             </Router>
-            <Footer />
         </div>
     )
 }

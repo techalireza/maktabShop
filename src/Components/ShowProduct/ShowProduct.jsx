@@ -1,38 +1,50 @@
-import React, { useEffect, useState } from 'react'
-import { Carousel, Container, Row, Col } from 'react-bootstrap'
-
-import api from '../../api/api'
+import React, { useEffect } from 'react'
+import { Link } from 'react-router-dom'
+import { connect, useSelector } from 'react-redux'
 import CardProduct from '../CardProduct/CardProduct'
 import './ShowProduct.scss'
+import { fetchApi } from '../../Redux/productRedux/product.thunk'
+import { Col, Row } from 'react-bootstrap'
+import ShowOneCategory from '../../Views/ShowOneCategory/ShowOneCategory'
 
-function ShowProduct({ methode, attribut }) {
-    const [products, setProducts] = useState([])
-    const [pending, setPending] = useState(true)
+
+function ShowProduct({ methode, attribut, fetchApi, categoryID }) {
+
+    const products = useSelector(state => state.product.products)
+    const pending = useSelector(state => state.product.pending)
+
     useEffect(() => {
-        api.get(methode, attribut)
-            .then((response) => {
-                setProducts(response.data)
-                setPending(false)
-            })
-            .catch((error) => {
-                console.log(error.response.data);
-            })
+        fetchApi(methode, attribut, categoryID)
+        console.log(products)
     }, [])
 
     return (
-        <div className="my-row overflow-x-scroll">
+        <div className="my-container">
             {
                 pending ? <p>loading</p> :
-                    products.map(item =>
-                        <div className="my-col" key={item.id}>
-                            <CardProduct item={item} />
+                    categoryID == 'categoryList' ?
+                        <Row>
+                            {products[categoryID].map(item =>
+                                <Col xs={12} md={6} lg={4}>
+                                    <ShowOneCategory item={item} />
+                                </Col>
+                            )}
+                        </Row>
+                        :
+                        <div className="my-row overflow-x-scroll">
+                            {products[categoryID].map(item =>
+                                <div className="my-col" key={item.id}>
+                                    <Link to={`./products/${item.id}`}>
+                                        <CardProduct item={item} />
+                                    </Link>
+                                </div>
+                            )}
                         </div>
-                    )
             }
         </div>
-
     )
 }
 
-export default ShowProduct
+export default connect(null, { fetchApi })(ShowProduct)
+
 

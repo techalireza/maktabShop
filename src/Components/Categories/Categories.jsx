@@ -9,6 +9,7 @@ function Categories() {
         api.get('products/categories', {
             parent: 0
         }).then((response) => {
+            console.log(response.data)
             setCategories(response.data)
         })
     }, [])
@@ -25,14 +26,15 @@ function Categories() {
                                 <Col className="my-cat-col" xs={2} lg={1} key={item.id}>
                                     <Link to={`/category/${item.id}`} className="my-cat-link">
                                         <div>{item.name}</div>
+                                        <img className="w-65 d-flex mt-0 mx-auto" src={item.image.src} alt="" />
                                     </Link>
-                                    <img className="w-50 d-flex mt-0 mx-auto" src={item.image.src} alt="" />
+                                    
                                 </Col> :
                                 <Col className="my-cat-col" xs={2} lg={1} key={item.id}>
                                     <Link to={`/category/${item.id}`} className="my-cat-link">
                                         <div>{item.name}</div>
+                                        <img className="w-75 d-flex my-mt-2 mt-lg-3 mx-auto" src={item.image.src} alt="" />
                                     </Link>
-                                    <img className="w-50 d-flex my-mt-2 mt-lg-3 mx-auto" src={item.image.src} alt="" />
                                 </Col>
                         )
                     }

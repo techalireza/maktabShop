@@ -1,0 +1,36 @@
+$color-primary : #27017c;
+$color-secondary : #00d392;
+$font-primary : 1rem 'sans','myriadpro';
+
+.dir-ltr{
+    direction: ltr !important;
+}
+.carousel .slide{
+    background-color: transparent !important;
+}
+.carousel .control-prev.control-arrow:before {
+    border-right: 8px solid $color-primary !important;
+}
+.carousel .control-next.control-arrow:before {
+    border-left: 8px solid $color-primary !important;
+}
+.left-border{
+    border-left: 1px solid #eee;
+}
+.h-27rem{
+    height: 27rem;
+    width: auto;
+}
+.handle-height{
+    height: 100%;
+    width: auto !important;
+}
+@media only screen and (max-width: 992px) {
+    .left-border{
+        border-bottom: 1px solid #eee;
+    }
+    .h-27rem{
+        height: 15rem;
+        width: auto;
+    }
+}

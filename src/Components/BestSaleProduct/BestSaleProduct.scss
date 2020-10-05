@@ -1,11 +1,12 @@
 $color-primary : #27017c;
 $color-secondary : #00d392;
 $font-primary : 1rem 'sans','myriadpro';
+$font-secondary : 1rem 'secondary','myriadpro';
 
 .sale-container{
+    background-color: #fff !important;
     margin: 3rem auto;
     width: 89%;
-    border: 1px solid #ddd;
     border-radius: 1rem;
     box-shadow: 1px 1px 5px rgba(39, 1, 124 , .1);
     .sale-text{
@@ -13,7 +14,7 @@ $font-primary : 1rem 'sans','myriadpro';
         margin-left: 1rem;
         margin-right: 1.5rem;
         margin-bottom: 0;
-        font-weight: 400;
+        font-weight: 700;
         font-size: 1.3rem;
         color: #444;
         padding: .5rem 0 1rem;
@@ -60,11 +61,14 @@ $font-primary : 1rem 'sans','myriadpro';
     }
     .best-sale{
         .my-col{
-            width: 195px;
-            margin: .7rem;
+            width: 194px;
+            margin: 1rem .7rem 0;
         }
         .my-card{
-    
+            border: transparent;
+        }
+        .my-card:hover{        
+            box-shadow: 1px 1px 10px #ddd;
         }
         .my-card-body{
             margin: .5rem 0;
@@ -73,10 +77,15 @@ $font-primary : 1rem 'sans','myriadpro';
             height: 120px;
         }
         .my-card-title{
-            font: $font-primary;
+            font: $font-secondary;
             font-weight: 700;
             font-size: .7rem;
             height: 3rem;
+        }
+        .badge{
+            font: $font-primary;
+        font-weight: 700;
+        font-size: 75%;
         }
         .my-card-price{
             font:$font-primary;
@@ -91,5 +100,45 @@ $font-primary : 1rem 'sans','myriadpro';
             }
         }
         
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .sale-container{
+        margin: 1rem auto;
+        width: 100%;
+        background-color: transparent !important;
+        border: none;
+        box-shadow: none;
+        .sale-text{
+            margin-right: 1rem;
+            font-weight: 700;
+            font-size: 1.3rem;
+            padding: .5rem 0 1.3rem;
+        }
+        .sale-text span{
+            font-size: 1.3rem;
+        }
+        .sale-text::after{
+            display: none;
+            content: "";
+        }
+        .sale-text span::before{
+            content: "";
+            display: none;
+        }
+        .sale-text span::after{
+            content: "";
+            display: none;
+        }
+        .best-sale{
+            .my-card{        
+                box-shadow: 1px 1px 10px #e6e6e6;
+            }
+            .my-col{
+                width: 194px;
+                margin: .5rem;
+            }
+        }
     }
 }

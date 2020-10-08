@@ -15,18 +15,20 @@ function ShowProduct({ methode, attribut, fetchApi, categoryID }) {
 
     useEffect(() => {
         fetchApi(methode, attribut, categoryID)
-        console.log(products)
+        console.log("category : ", products)
     }, [])
 
     return (
-        <div className="my-container">
+        <div className="overflow-hidden">
             {
                 pending ? <p>loading</p> :
                     categoryID == 'categoryList' ?
                         <Row>
                             {products[categoryID].map(item =>
-                                <Col xs={12} md={6} lg={4}>
-                                    <ShowOneCategory item={item} />
+                                <Col xs={12} md={6} lg={3}>
+                                    <Link to={`/products/${item.id}`}>
+                                        <CardProduct item={item} />
+                                    </Link>
                                 </Col>
                             )}
                         </Row>
@@ -34,7 +36,7 @@ function ShowProduct({ methode, attribut, fetchApi, categoryID }) {
                         <div className="my-row overflow-x-scroll">
                             {products[categoryID].map(item =>
                                 <div className="my-col" key={item.id}>
-                                    <Link to={`./products/${item.id}`}>
+                                    <Link to={`/products/${item.id}`}>
                                         <CardProduct item={item} />
                                     </Link>
                                 </div>

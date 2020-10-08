@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-import { removeFromBasket } from '../../Redux/productRedux/product.actions'
+import { removeFromBasket } from '../../Redux/basketRedux/basket.action'
 
 function Basket({ basketList, removeFromBasket }) {
     return (
@@ -9,14 +9,21 @@ function Basket({ basketList, removeFromBasket }) {
             {
                 console.log("basketList : ", basketList)
             }
-            this is a basket
+            {
+                basketList.map(item => 
+                    <>
+                        <h1>{item.name}</h1>
+                        <p>{item.description}</p>
+                    </>
+                )
+            }
         </div>
     )
 }
 
 const mapStateToProps = state => {
     return {
-        basketList: state.product.basket
+        basketList: state.basket.baskets
     }
 }
 export default connect(mapStateToProps, { removeFromBasket })(Basket)

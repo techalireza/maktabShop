@@ -2,7 +2,7 @@ import React from 'react'
 import { Badge, Button } from 'react-bootstrap'
 
 import { connect } from 'react-redux'
-import { addToBasket } from '../../Redux/productRedux/product.actions'
+import { addToBasket } from '../../Redux/basketRedux/basket.action'
 import './DescriptionProduct.scss'
 
 function DescriptionProduct({ product, basket, addToBasket }) {
@@ -63,7 +63,7 @@ function DescriptionProduct({ product, basket, addToBasket }) {
 
 const mapStateToProps = state => {
     return {
-        basket: state.product.basket,
+        basket: state.basket.baskets,
     }
 }
 export default connect(mapStateToProps, { addToBasket })(DescriptionProduct)

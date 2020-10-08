@@ -3,6 +3,7 @@ $color-secondary : #00d392;
 $font-primary : 1rem 'sans','myriadpro';
 $font-secondary : 1rem 'secondary','myriadpro';
 
+// style for product
 .card-product{
     .my-card-body{
         margin: 1rem 0;
@@ -46,6 +47,20 @@ $font-secondary : 1rem 'secondary','myriadpro';
             font-weight: 400;
             font-size: 1rem;
         }
+    }
+}
+
+.categories-container{
+    max-width: 1340px;
+    .card-product{
+        margin-top: 1rem;
+    }
+    .my-card{
+        border-radius: 1rem !important;
+        border: 1px solid #e5e5e5;
+    }
+    .my-card:hover{
+        box-shadow: 1px 1px 20px rgba($color: #000000, $alpha: .2);
     }
 }
 
